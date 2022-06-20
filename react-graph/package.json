@@ -1,0 +1,67 @@
+{
+  "name": "react-graph",
+  "version": "0.0.7",
+  "description": "Render dynamic graphs based on d3 models",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "scripts": {
+    "lint": "eslint --ext .tsx,.ts .",
+    "lint:fix": "npm run lint -- --fix",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "prepublishOnly": "yarn build"
+  },
+  "files": [
+    "/lib"
+  ],
+  "dependencies": {
+    "d3": "3",
+    "deepmerge": "^4.2.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-svg-inline": "^2.1.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/d3": "3",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.0.4",
+    "typescript": "^4.1.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jcarva/react-graph.git"
+  },
+  "keywords": [
+    "react",
+    "graph",
+    "d3",
+    "neo4j"
+  ],
+  "author": "Jaelson Carvalho <jaelsoncarvalhojr@gmail.com> (https://github.com/jcarva)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jcarva/react-graph/issues"
+  },
+  "homepage": "https://github.com/jcarva/react-graph"
+}
